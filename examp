@@ -1,0 +1,41 @@
+Name  Register Number		Usage
+-----------------------------------------------------------------
+zero	x0			Constant value 0
+ra	x1			Return Adress
+sp	x2			Stack pointer
+gp	x3			Globan pointer
+tp	x4			Thread pointer
+t0-t2	x5-x7			Temporaries
+s0/fp	x8			Saved register/Frame pointer
+s1	x9			Saved register
+a0-a1	x10-x11			Function arguments/return values
+a2-a7	x12-x17			Function arguments
+s2-s11	x18-x31			Saved registers
+t3-t6	x28-x31			Temporaries
+
+
+====================================================================================
+
+
+C code:					RISC-V assembly code
+-------------------			-----------------------
+a = b + c - d;				add t, b, c
+					sub a, t, d
+
+
+f = (g + h) - (i + j)			g -> s0, h -> s1, i->s2, j -> s3, f -> s4
+					add t0, s0, s1
+					add t1, s2, s3
+					sub s4, t0, t1
+
+s0 = 0					add s0, zero, zero
+
+s0 = 1					addi s0, zero, 1
+
+
+
+
+============================================================
+
+
+
