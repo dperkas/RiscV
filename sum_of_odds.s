@@ -16,7 +16,7 @@ array:
 
 	add		s0, zero, zero		# index, i=0
 	add		s3, zero, zero		# sum = 0
-	beq		a1, zero, exit		# empty array!
+	beq		a1, zero, done		# empty array!
 
 loop:
 	beq		a1, s0, done
