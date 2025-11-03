@@ -21,7 +21,7 @@ array:
 loop:
 	beq		a1, s0, done
 	lw		s1, 0(a0)
-	and		t1, s1, 0x00000001		# mask, if LSB is 1, number is odd
+	andi	t1, s1, 0x00000001		# mask, if LSB is 1, number is odd
 	addi	a0, a0, 4
 	bne		t1, zero, isodd			# if s1 AND 0x1 = 0, s1 is odd
 	j		loop
