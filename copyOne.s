@@ -1,5 +1,5 @@
 #
-# Find number in array pointers versio
+# Find number in array pointers version
 
 	.data
 
